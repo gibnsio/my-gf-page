@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe5ec;
+            color: #ff99cc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+        .heart {
+            font-size: 5rem;
+            color: #ff6699;
+            margin-top: 20px;
+        }
+        .gift-box {
+            margin-top: 40px;
+            background-color: #ffccdd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ff6699;
+        }
+        .hidden {
+            display: none;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="firstPage">
+        <h1>To My Beautiful Angel ❤️</h1>
+        <p>You are my sunshine, my only sunshine. You make me happy when skies are gray.</p>
+        <p>Every moment with you is a moment I cherish. You bring light and joy into my life every single day.</p>
+        <p>Maaf ia aku ketiduran, enih aku mengoding untuk kamu</p>
+        
+        <div class="heart">💖</div>
+        
+        <div class="gift-box">
+            <p>Click the button below for a special message!</p>
+            <button class="button" onclick="showCustomMessage()">Open Your Gift 🎁</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="customMessagePage">
+        <h1>Just for You, sayangku 💕</h1>
+        <p>You are the reason I smile, the reason I feel complete. You make me want to be the best version of myself.</p>
+        <p>I can’t imagine a life without you. You are my soulmate, my best friend, and the love of my life. Anjay</p>
+        <p>Gudmolning ia..,, I love you ❤️</p>
+        
+        <!-- Embed YouTube Video -->
+        <iframe src="https://www.youtube.com/embed/mifHo9fC5QI" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+
+        <button class="button" onclick="goBack()">Back to the First Page</button>
+    </div>
+
+    <script>
+        function showCustomMessage() {
+            document.getElementById('firstPage').classList.add('hidden');
+            document.getElementById('customMessagePage').classList.remove('hidden');
+        }
+
+        function goBack() {
+            document.getElementById('customMessagePage').classList.add('hidden');
+            document.getElementById('firstPage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
